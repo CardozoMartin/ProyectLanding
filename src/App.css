@@ -1,0 +1,200 @@
+body {
+  background: #242424;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  margin: 0;
+  transition: background-color 0.5s ease-in-out;
+
+  color: inherit;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.8rem;
+  text-align: center;
+}
+
+/* Centrado del contenido */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Estilos para h1 */
+.title {
+  font-size: clamp(1rem, 3vw, 3rem);
+  line-height: 1.2;
+  margin: 0.5em 0;
+  text-align: center;
+}
+span {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+}
+.rocket {
+  width: 100px; /* Ajusta el tamaño según sea necesario */
+  animation: moveRocket 2s ease-in-out infinite alternate; /* Define la animación */
+}
+
+@keyframes moveRocket {
+  0% {
+    transform: translateY(0); /* Comienza en la posición original */
+  }
+  50% {
+    transform: translateY(-10px); /* Sube 10 píxeles */
+  }
+  100% {
+    transform: translateY(0); /* Vuelve a la posición original */
+  }
+}
+
+/* Estilos para el subtítulo */
+.subtitle {
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  color: #9b9696; /* Un tono gris más suave para diferenciarlo */
+  margin-top: 0.5em;
+  text-align: center;
+  max-width: 800px; /* Limita el ancho del subtítulo */
+  font-weight: bold;
+}
+
+/* Media queries para tamaños más pequeños */
+.section2 {
+   /* Oculta inicialmente */
+}
+
+button{
+  margin: 5px;
+}
+h2{
+  color: black;
+}
+/* Estilos Light */
+.light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.light button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.light button:hover {
+  border-color: #646cff;
+}
+
+/* Estilos Dark */
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+.dark button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #e9e3e3;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #000;
+}
+.dark button:hover {
+  border-color: #000000;
+}
+
+/* Estilos Neon */
+.neon {
+  background-color: #2ef8a0;
+  color: #000;
+}
+.neon .title{
+  color: #f82d97;
+}
+.neon button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #ff0534;
+  color: #2ef8a0;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.neon button:hover {
+  border-color: #646cff;
+}
+
+/* Estilos Retro*/
+.retro {
+  background-color: #a2b38b;
+  color: #000;
+}
+.retro .title{
+  color: #ede6db;
+}
+.retro button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #9d5353;
+  color: #ede6db;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.retro button:hover {
+  border-color: #646cff;
+}
+
+
+/* Estilos Animaciones */
+
+
+/* Estilos por tema */
+
+
+
+
+
+
+/* Media queries para tamaños más pequeños */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  span {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    margin-top: -180px;
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}
