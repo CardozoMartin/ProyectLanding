@@ -10,6 +10,7 @@ body {
   color: inherit;
 }
 
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -65,16 +66,82 @@ span {
 }
 
 /* Media queries para tamaños más pequeños */
-.section2 {
-   /* Oculta inicialmente */
-}
 
-button{
+button {
   margin: 5px;
 }
-h2{
+h2 {
   color: black;
 }
+
+.containerCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  margin: 5px;
+}
+.cardArticle {
+  flex-grow: 1;
+  flex-basis: 200;
+  width: auto;
+  margin: 5px;
+}
+
+/*Estilos de lista*/
+.hero-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #72424e; /* Fondo oscuro */
+  color: #fff;
+  margin-top: 15px;
+}
+
+h3 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.btn-cta {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #3f4e2c;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  color: #fff;
+}
+
+.btn-cta:hover {
+  background-color: #45a049; /* Color más oscuro al pasar el cursor */
+}
+
+blockquote {
+  font-style: italic;
+  margin-top: 30px;
+  color: #ddd;
+}
+
+
 /* Estilos Light */
 .light {
   background-color: #f0f0f0;
@@ -94,6 +161,23 @@ h2{
 }
 .light button:hover {
   border-color: #646cff;
+}
+.light .card {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid black;
+}
+.light .icon {
+  background-color: #fdfd96;
+}
+.light .card:hover {
+  border: 1px solid #2ef8a0;
+}
+
+.light .alert {
+  color: #000000;
+}
+.light .message {
+  color: #000000;
 }
 
 /* Estilos Dark */
@@ -117,12 +201,26 @@ h2{
   border-color: #000000;
 }
 
+.dark .card {
+  background-color: #1a1a1a;
+  border: 1px solid white;
+}
+.dark .card:hover {
+  border: 1px solid #a6e1f3;
+}
+
+.dark .alert {
+  color: #ede6db;
+}
+.dark .message {
+  color: #ede6db;
+}
 /* Estilos Neon */
 .neon {
   background-color: #2ef8a0;
   color: #000;
 }
-.neon .title{
+.neon .title {
   color: #f82d97;
 }
 .neon button {
@@ -140,13 +238,30 @@ h2{
 .neon button:hover {
   border-color: #646cff;
 }
+.neon .card {
+  background-color: #ff0534;
+  border: 1px solid white;
+}
+.neon .card:hover {
+  border: 1px solid #2ef8a0;
+}
+.neon .icon {
+  background-color: #2ef8a0;
+}
+
+.neon .alert {
+  color: #2ef8a0;
+}
+.neon .message {
+  color: #2ef8a0;
+}
 
 /* Estilos Retro*/
 .retro {
   background-color: #a2b38b;
   color: #000;
 }
-.retro .title{
+.retro .title {
   color: #ede6db;
 }
 .retro button {
@@ -164,17 +279,27 @@ h2{
 .retro button:hover {
   border-color: #646cff;
 }
+.retro .card {
+  background-color: #9d5353;
+  border: 1px solid white;
+}
+.retro .icon {
+  background-color: #e9d5da;
+}
+.retro .card:hover {
+  border: 1px solid #2ef8a0;
+}
 
+.retro .alert {
+  color: #ede6db;
+}
+.retro .message {
+  color: #ede6db;
+}
 
 /* Estilos Animaciones */
 
-
 /* Estilos por tema */
-
-
-
-
-
 
 /* Media queries para tamaños más pequeños */
 @media (max-width: 768px) {
