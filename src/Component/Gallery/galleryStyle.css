@@ -1,0 +1,37 @@
+/* Gallery.css */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Cambia el tamaño mínimo según lo necesites */
+    gap: 10px; /* Espaciado entre las imágenes */
+    padding: 10px; /* Espaciado alrededor de la galería */
+    justify-items: center; /* Centra horizontalmente los ítems */
+    align-items: center; /* Centra verticalmente los ítems */
+}
+  
+.gallery-item {
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    overflow: hidden; /* Evitar que las imágenes se desborden */
+    border-radius: 8px; /* Bordes redondeados para cada imagen */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+  
+.gallery-item img {
+    width: 100%; /* Asegúrate de que la imagen ocupe el 100% del contenedor */
+    height: 150px; /* Altura fija para que todas las imágenes tengan el mismo tamaño */
+    object-fit: cover; /* Recortar la imagen si es necesario para mantener la proporción */
+}
+/* CSS (por ejemplo, en App.css) */
+.my-masonry-grid {
+    display: -webkit-box; /* Múltiples columnas en Safari */
+    display: flex;
+    margin-left: -30px; /* Ajuste según el espacio entre columnas */
+    width: auto;
+  }
+  
+  .my-masonry-grid_column {
+    padding-left: 30px; /* Espaciado entre columnas */
+    background-clip: padding-box;
+  }
+  

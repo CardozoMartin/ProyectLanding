@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.css"; // Estilos generales
 import rocket from "./img/rocket.png";
+import whatsapp from "./img/whatsapp.png";
+import telegram from "./img/telegrama.png";
+import chatBot from "./img/bot-conversacional.png";
+
+
 import useStore from "./useStore";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,10 +18,21 @@ import {
   faEye,
 } from "@fortawesome/free-solid-svg-icons";
 import Card from "./Component/Card";
+import EmblaCarousel from "./Component/Carrusel/EmblaCarousel";
+import Gallery from "./Component/Gallery/Gallery";
+
+const OPTIONS = {};
+const SLIDE_COUNT = 10;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 function App() {
   const [opacity, setOpacity] = useState(0);
   const [scrollY, setScrollY] = useState(0);
+  const [carrusel, setCarrusel] = useState(false);
+  const [gallery, setGallery] = useState(false);
+  const [buttonChatBot, setChatBot] = useState(false);
+  const [buttonTelegram, setTelegram] = useState(false);
+  const [buttonWahtsapp, setWhatsapp] = useState(false);
   const { theme, setTheme } = useStore();
 
   useEffect(() => {
@@ -38,10 +54,39 @@ function App() {
   useEffect(() => {
     // Eliminar clases de tema anteriores
     document.body.classList.remove("light", "dark", "neon", "retro");
-
     // Agregar la nueva clase de tema
     document.body.classList.add(theme);
   }, [theme]); // Ejecutar cuando cambie el tema
+
+  const handleCarrusel = () => {
+    setCarrusel(true);
+    setGallery(false);
+    // Correctly toggle the state
+  };
+
+  const handleGallery = () => {
+    setCarrusel(false);
+    setGallery(true);
+  };
+  const handleWhatsapp = () => {
+    setWhatsapp(true);
+    setTelegram(false);
+    setChatBot(false)
+
+  };
+  const handleTelegram = () => {
+    setTelegram(true);
+    setWhatsapp(false);
+    setChatBot(false)
+
+  };
+  const handleChatBot = ()=>{
+    setChatBot(true)
+    setWhatsapp(false);
+    setTelegram(false);
+
+
+  }
 
   return (
     <div className="app">
@@ -133,19 +178,78 @@ function App() {
 
         <article>
           <div>
-          <div className="hero-section">
-    <h3>Construye la landing page de tus sueños</h3>
-    <p>Transforma tus ideas en resultados reales con un diseño atractivo y conversión garantizada.</p>
-    <ul>
-        <li>📈 <strong>Aumenta tus conversiones</strong> con un diseño optimizado.</li>
-        <li>🎨 <strong>Personaliza tu estilo</strong> con plantillas fáciles de usar.</li>
-        <li>⚡ <strong>Carga rápida</strong> para mejorar la experiencia del usuario.</li>
-    </ul>
-    <a href="#start" className="btn-cta">¡Empieza ahora!</a>
-    
-</div>
+            <div className="hero-section">
+              <h3>Construye la landing page de tus sueños</h3>
+              <p>
+                Transforma tus ideas en resultados reales con un diseño
+                atractivo y conversión garantizada.
+              </p>
+              <ul>
+                <li>
+                  📈 <strong>Aumenta tus conversiones</strong> con un diseño
+                  optimizado.
+                </li>
+                <li>
+                  🎨 <strong>Personaliza tu estilo</strong> con plantillas
+                  fáciles de usar.
+                </li>
+                <li>
+                  ⚡ <strong>Carga rápida</strong> para mejorar la experiencia
+                  del usuario.
+                </li>
+              </ul>
+              <a href="#start" className="btn-cta">
+                ¡Empieza ahora!
+              </a>
+            </div>
           </div>
         </article>
+      </section>
+
+      <section>
+        <div className="containerSlider">
+          <h2>Te gustaria mostrar tus productos </h2>
+          <button onClick={handleCarrusel}>Carrusel</button>
+          <button onClick={handleGallery}>Galleria</button>
+          <button>Carrusel animado</button>
+          {carrusel && ( // Render carousel when carrusel is true
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          )}
+          {gallery && <Gallery />}
+        </div>
+      </section>
+      <section>
+        <h2>
+          Tambien podes personalizar aun mas agregando botones para contacto
+        </h2>
+        <button onClick={handleWhatsapp}>Ver Whatsapp</button>
+        <button onClick={handleTelegram}>Telegram</button>
+        <button onClick={handleChatBot}>ChatBot</button>
+
+        {buttonWahtsapp && (
+          <div className="whatsapp">
+            <a href="https://wa.me/tu-numero" target="_blank">
+              <img src={whatsapp} alt="WhatsApp" />
+            </a>
+          </div>
+        )}
+        {buttonTelegram && (
+          <div className="telegram">
+            <a href="https://wa.me/tu-numero" target="_blank">
+              <img src={telegram} alt="telegram" />
+            </a>
+          </div>
+        )}
+        {
+          buttonChatBot && (
+            <div className="chatBot">
+            <a href="https://wa.me/tu-numero" target="_blank">
+              <img src={chatBot} alt="chatBot" />
+            </a>
+          </div>
+          )
+        }
+        
       </section>
     </div>
   );

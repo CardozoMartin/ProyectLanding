@@ -10,7 +10,6 @@ body {
   color: inherit;
 }
 
-
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -78,7 +77,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   margin: 5px;
 }
 .cardArticle {
@@ -134,13 +133,65 @@ li {
 .btn-cta:hover {
   background-color: #45a049; /* Color más oscuro al pasar el cursor */
 }
-
-blockquote {
-  font-style: italic;
-  margin-top: 30px;
-  color: #ddd;
+.whatsapp {
+  position: fixed; /* Cambiado a fixed */
+  bottom: 20px; /* Distancia desde el fondo de la ventana */
+  right: 20px; /* Distancia desde el lado derecho de la ventana */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
+.whatsapp img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Opcional: bordes redondeados para un estilo más atractivo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: transform 0.3s; /* Transición suave para efectos de hover */
+}
+
+.whatsapp img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+.telegram {
+  position: fixed; /* Cambiado a fixed */
+  bottom: 20px; /* Distancia desde el fondo de la ventana */
+  right: 20px; /* Distancia desde el lado derecho de la ventana */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.telegram img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Opcional: bordes redondeados para un estilo más atractivo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: transform 0.3s; /* Transición suave para efectos de hover */
+}
+
+.telegram img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+.chatBot {
+  position: fixed; /* Cambiado a fixed */
+  bottom: 20px; /* Distancia desde el fondo de la ventana */
+  right: 20px; /* Distancia desde el lado derecho de la ventana */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.chatBot img {
+  background-color: #646cff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Opcional: bordes redondeados para un estilo más atractivo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  transition: transform 0.3s; /* Transición suave para efectos de hover */
+}
+
+.chatBot img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+}
+
+.containerSlider {
+  width: auto;
+}
 
 /* Estilos Light */
 .light {
