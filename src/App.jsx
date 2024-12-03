@@ -20,6 +20,8 @@ import {
 import Card from "./Component/Card";
 import EmblaCarousel from "./Component/Carrusel/EmblaCarousel";
 import Gallery from "./Component/Gallery/Gallery";
+import CarruselLanding from "./Component/CarruselLanding/AppLaning/CarruselLanding";
+
 
 const OPTIONS = {};
 const SLIDE_COUNT = 10;
@@ -93,22 +95,24 @@ function App() {
       <section style={{ height: "100vh" }}>
         <article>
           <div>
-            <div className="container">
-              <h1 className="title">
-                <span>T</span>
-                ransforma visitantes en clientes con una landing page optimizada
-                y a medida para tu negocio.
-              </h1>
-              <img className="rocket" src={rocket} alt="" />
-              <p className="subtitle">
-                Impulsa tu negocio con una landing page que convierte.
+            <div className="container d-flex justify-content-center mt-5">
+              <div className="poppins-black" >
+                 <span className="span ">¿Necesitas </span><h1 className="title d-inline"> tu web </h1>  <span className="span"> innovadora ?</span>
+              </div>
+               <img className="rocket" src={rocket} alt="" /> 
+              <p className="subtitle lead">
+                "La web que necesitas, como la imaginas."
               </p>
               <button>Contactanos</button>
+            </div>
+            <div className="">
+            <CarruselLanding></CarruselLanding>
+            
             </div>
           </div>
         </article>
       </section>
-      <section>
+      {/* <section>
         <article className="containerCard">
           <div className="cardArticle">
             <Card
@@ -250,7 +254,7 @@ function App() {
           )
         }
         
-      </section>
+      </section> */}
     </div>
   );
 }

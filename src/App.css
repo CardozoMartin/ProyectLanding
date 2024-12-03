@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
 body {
   background: #242424;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+
   margin: 0;
   transition: background-color 0.5s ease-in-out;
 
@@ -23,33 +29,114 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+
 }
+
+
 
 /* Estilos para h1 */
 .title {
-  font-size: clamp(1rem, 3vw, 3rem);
+  font-family: "po";
+  font-size: 3rem;
   line-height: 1.2;
   margin: 0.5em 0;
   text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #6a50ff, #1e90ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  font-family: sans-serif;
 }
+.span {
+  color: #000000!important;
+  font-size: clamp(1rem, 3vw, 3rem);
+  line-height: 1.2;
+  font-size: 3rem;
+  font-weight: bold;
+font-family: sans-serif;
+}
+
 span {
   font-size: clamp(1.8rem, 3vw, 3rem);
 }
+
 .rocket {
-  width: 100px; /* Ajusta el tamaño según sea necesario */
-  animation: moveRocket 2s ease-in-out infinite alternate; /* Define la animación */
+  width: 100px;
+  /* Ajusta el tamaño según sea necesario */
+  animation: moveRocket 2s ease-in-out infinite alternate;
+  /* Define la animación */
+}
+/* Estilo del botón "Contactanos" */
+button {
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto futurista al pasar el mouse sobre el botón */
+button:hover {
+  background-color: #3f4e2c;
+  border-color: #646cff;
+  box-shadow: 0 0 10px #646cff, 0 0 20px #646cff, 0 0 30px #646cff;
+  color: #e9e3e3;
+}
+
+/* Agregar un efecto de resplandor en el fondo del botón */
+button:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, #646cff, #1e90ff, #6a50ff, #ff1ec4);
+  animation: glowing 2s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+/* Animación de resplandor */
+
+
+
+/* Mantener el texto sobre el efecto */
+button:hover:before {
+  opacity: 0;
+}
+
+button span {
+  position: relative;
+  z-index: 1; /* Asegura que el texto esté por encima del fondo */
 }
 
 @keyframes moveRocket {
   0% {
-    transform: translateY(0); /* Comienza en la posición original */
+    transform: translateY(0);
+    /* Comienza en la posición original */
   }
+
   50% {
-    transform: translateY(-10px); /* Sube 10 píxeles */
+    transform: translateY(-10px);
+    /* Sube 10 píxeles */
   }
+
   100% {
-    transform: translateY(0); /* Vuelve a la posición original */
+    transform: translateY(0);
+    /* Vuelve a la posición original */
   }
 }
 
@@ -57,10 +144,12 @@ span {
 .subtitle {
   font-size: clamp(0.8rem, 2vw, 1.5rem);
   line-height: 1.5;
-  color: #9b9696; /* Un tono gris más suave para diferenciarlo */
+  color: #9b9696;
+  /* Un tono gris más suave para diferenciarlo */
   margin-top: 0.5em;
   text-align: center;
-  max-width: 800px; /* Limita el ancho del subtítulo */
+  max-width: 800px;
+  /* Limita el ancho del subtítulo */
   font-weight: bold;
 }
 
@@ -69,6 +158,7 @@ span {
 button {
   margin: 5px;
 }
+
 h2 {
   color: black;
 }
@@ -80,6 +170,7 @@ h2 {
 
   margin: 5px;
 }
+
 .cardArticle {
   flex-grow: 1;
   flex-basis: 200;
@@ -91,7 +182,8 @@ h2 {
 .hero-section {
   text-align: center;
   padding: 50px;
-  background-color: #72424e; /* Fondo oscuro */
+  background-color: #72424e;
+  /* Fondo oscuro */
   color: #fff;
   margin-top: 15px;
 }
@@ -131,62 +223,90 @@ li {
 }
 
 .btn-cta:hover {
-  background-color: #45a049; /* Color más oscuro al pasar el cursor */
+  background-color: #45a049;
+  /* Color más oscuro al pasar el cursor */
 }
+
 .whatsapp {
-  position: fixed; /* Cambiado a fixed */
-  bottom: 20px; /* Distancia desde el fondo de la ventana */
-  right: 20px; /* Distancia desde el lado derecho de la ventana */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed;
+  /* Cambiado a fixed */
+  bottom: 20px;
+  /* Distancia desde el fondo de la ventana */
+  right: 20px;
+  /* Distancia desde el lado derecho de la ventana */
+  z-index: 1000;
+  /* Asegura que esté por encima de otros elementos */
 }
 
 .whatsapp img {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Opcional: bordes redondeados para un estilo más atractivo */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-  transition: transform 0.3s; /* Transición suave para efectos de hover */
+  border-radius: 50%;
+  /* Opcional: bordes redondeados para un estilo más atractivo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra para darle profundidad */
+  transition: transform 0.3s;
+  /* Transición suave para efectos de hover */
 }
 
 .whatsapp img:hover {
-  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+  transform: scale(1.1);
+  /* Efecto de zoom al pasar el ratón */
 }
+
 .telegram {
-  position: fixed; /* Cambiado a fixed */
-  bottom: 20px; /* Distancia desde el fondo de la ventana */
-  right: 20px; /* Distancia desde el lado derecho de la ventana */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed;
+  /* Cambiado a fixed */
+  bottom: 20px;
+  /* Distancia desde el fondo de la ventana */
+  right: 20px;
+  /* Distancia desde el lado derecho de la ventana */
+  z-index: 1000;
+  /* Asegura que esté por encima de otros elementos */
 }
 
 .telegram img {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Opcional: bordes redondeados para un estilo más atractivo */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-  transition: transform 0.3s; /* Transición suave para efectos de hover */
+  border-radius: 50%;
+  /* Opcional: bordes redondeados para un estilo más atractivo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra para darle profundidad */
+  transition: transform 0.3s;
+  /* Transición suave para efectos de hover */
 }
 
 .telegram img:hover {
-  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+  transform: scale(1.1);
+  /* Efecto de zoom al pasar el ratón */
 }
+
 .chatBot {
-  position: fixed; /* Cambiado a fixed */
-  bottom: 20px; /* Distancia desde el fondo de la ventana */
-  right: 20px; /* Distancia desde el lado derecho de la ventana */
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  position: fixed;
+  /* Cambiado a fixed */
+  bottom: 20px;
+  /* Distancia desde el fondo de la ventana */
+  right: 20px;
+  /* Distancia desde el lado derecho de la ventana */
+  z-index: 1000;
+  /* Asegura que esté por encima de otros elementos */
 }
 
 .chatBot img {
   background-color: #646cff;
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Opcional: bordes redondeados para un estilo más atractivo */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
-  transition: transform 0.3s; /* Transición suave para efectos de hover */
+  border-radius: 50%;
+  /* Opcional: bordes redondeados para un estilo más atractivo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  /* Sombra para darle profundidad */
+  transition: transform 0.3s;
+  /* Transición suave para efectos de hover */
 }
 
 .chatBot img:hover {
-  transform: scale(1.1); /* Efecto de zoom al pasar el ratón */
+  transform: scale(1.1);
+  /* Efecto de zoom al pasar el ratón */
 }
 
 .containerSlider {
@@ -210,16 +330,20 @@ li {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .light button:hover {
   border-color: #646cff;
 }
+
 .light .card {
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid black;
 }
+
 .light .icon {
   background-color: #fdfd96;
 }
+
 .light .card:hover {
   border: 1px solid #2ef8a0;
 }
@@ -227,6 +351,7 @@ li {
 .light .alert {
   color: #000000;
 }
+
 .light .message {
   color: #000000;
 }
@@ -236,6 +361,7 @@ li {
   background-color: #333;
   color: #fff;
 }
+
 .dark button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -248,6 +374,7 @@ li {
   transition: border-color 0.25s;
   color: #000;
 }
+
 .dark button:hover {
   border-color: #000000;
 }
@@ -256,6 +383,7 @@ li {
   background-color: #1a1a1a;
   border: 1px solid white;
 }
+
 .dark .card:hover {
   border: 1px solid #a6e1f3;
 }
@@ -263,17 +391,21 @@ li {
 .dark .alert {
   color: #ede6db;
 }
+
 .dark .message {
   color: #ede6db;
 }
+
 /* Estilos Neon */
 .neon {
   background-color: #2ef8a0;
   color: #000;
 }
+
 .neon .title {
   color: #f82d97;
 }
+
 .neon button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -286,16 +418,20 @@ li {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .neon button:hover {
   border-color: #646cff;
 }
+
 .neon .card {
   background-color: #ff0534;
   border: 1px solid white;
 }
+
 .neon .card:hover {
   border: 1px solid #2ef8a0;
 }
+
 .neon .icon {
   background-color: #2ef8a0;
 }
@@ -303,6 +439,7 @@ li {
 .neon .alert {
   color: #2ef8a0;
 }
+
 .neon .message {
   color: #2ef8a0;
 }
@@ -312,9 +449,11 @@ li {
   background-color: #a2b38b;
   color: #000;
 }
+
 .retro .title {
   color: #ede6db;
 }
+
 .retro button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -327,16 +466,20 @@ li {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 .retro button:hover {
   border-color: #646cff;
 }
+
 .retro .card {
   background-color: #9d5353;
   border: 1px solid white;
 }
+
 .retro .icon {
   background-color: #e9d5da;
 }
+
 .retro .card:hover {
   border: 1px solid #2ef8a0;
 }
@@ -344,6 +487,7 @@ li {
 .retro .alert {
   color: #ede6db;
 }
+
 .retro .message {
   color: #ede6db;
 }
@@ -357,9 +501,11 @@ li {
   .title {
     font-size: 2.5rem;
   }
+
   span {
     font-size: clamp(1.8rem, 3vw, 3rem);
   }
+
   .subtitle {
     font-size: 1.2rem;
   }
@@ -370,6 +516,7 @@ li {
     margin-top: -180px;
     font-size: 2rem;
   }
+
   .subtitle {
     font-size: 1rem;
   }
