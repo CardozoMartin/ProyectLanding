@@ -5,7 +5,9 @@
   font-style: normal;
 }
 body {
-  background: #242424;
+  background-color: #242424!important;
+  min-height: 100vh; /* Asegura que el fondo cubra toda la altura de la pantalla */
+  margin: 0; /* Elimina márgenes por defecto */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -520,4 +522,44 @@ li {
   .subtitle {
     font-size: 1rem;
   }
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #123543; /* Ajusta el color según tu diseño */
+  color: #ffffff; /* Color del texto */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-buttons button {
+  background-color: #f2985b; /* Color de fondo de los botones */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-buttons button:hover {
+  background-color: #e0873c; /* Cambia de color al pasar el mouse */
 }

@@ -1,0 +1,121 @@
+.pricing {
+     /* Fondo gris claro para el contraste */
+    padding-top: 50px;
+  }
+  
+  .section-title {
+    margin-bottom: 50px;
+  }
+  
+  .pricing-card {
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-card:hover {
+    border-color: #f39c12;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05); /* Efecto de escala */
+  }
+  
+  .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .price {
+    font-size: 36px;
+    font-weight: bold;
+    color: #f39c12; /* Color vibrante */
+  }
+  
+  .price-subtext {
+    font-size: 18px;
+    color: #777;
+  }
+  
+  .card-body p.text-muted {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .card-body ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+  
+  .card-body ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .card-body ul li i {
+    color: #2ecc71; /* Verde vibrante para los iconos */
+    margin-right: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #f39c12;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #e67e22;
+    color: white;
+    transform: scale(1.1); /* Animación al pasar el cursor */
+  }
+  
+  /* Estilo específico para el plan Premium */
+  .premium-card {
+    border-color: #3498db; /* Azul vibrante para Premium */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .premium-card:hover {
+    border-color: #2980b9; /* Azul más oscuro */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .premium-btn {
+    background-color: #3498db;
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 12px 30px;
+  }
+  
+  .premium-btn:hover {
+    background-color: #2980b9;
+    color: white;
+    transform: scale(1.05); /* Zoom sutil en el botón */
+  }
+  
+  .premium-card {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .pricing-card {
+      padding: 20px;
+    }
+  }
+  

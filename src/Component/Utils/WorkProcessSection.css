@@ -1,0 +1,58 @@
+.work-process {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .step-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .step-box.active {
+    background-color: #f39c12; /* Fondo cuando está activo */
+    color: white;
+  }
+  
+  .step-box i {
+    font-size: 40px;
+    color: #f39c12; /* Color del ícono */
+    margin-bottom: 15px;
+  }
+  
+  .step-box h4 {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .step-box p {
+    font-size: 14px;
+  }
+  
+  .progress-container {
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 3px;
+  }
+  
+  .progress-bar {
+    height: 5px;
+    background-color: #f39c12;
+    border-radius: 3px;
+  }
+  
+  @media (max-width: 768px) {
+    .step-box {
+      margin-bottom: 30px;
+    }
+  }
+  
